@@ -1,0 +1,360 @@
+.btn.btn-cancel.none{
+    display: none;
+}
+.Container-add-questions{
+    position: fixed;
+    left: 0;
+    top: 40px;
+    width: 100%;
+    height: calc(100% - 40px);
+    z-index: 9999;
+}
+.Container-add-questions {
+    display: flex;
+    flex-direction: column;
+}
+.Container-add-questions .overlay{
+    opacity: 0.6;
+}
+.overlay {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    flex: none;
+    background: #000;
+    opacity: 0;
+    transition: opacity ease 200ms;
+}
+
+.item {
+    background: #f4f4f4;
+    display: flex;
+    flex-grow: 1;
+    position: absolute;
+    top: 15px;
+    right: 0;
+    width: calc(100% - 60px);
+    height: 100%;
+    transform: translateX(100%);
+    -webkit-transition: transform ease 300ms;
+}
+.show {
+    transform: translateX(0%);
+}
+.item .form-add .close {
+    display: flex;
+    position: absolute;
+    top: 2px;
+    right: 5px;
+    color: #3e3e3e;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: transparent url(../images/icon_close_15x15.png) 8px no-repeat;
+    padding: 8px 8px 8px 30px;
+    z-index: 99999;
+}
+.item .form-add .close:hover {
+    background-color: #f0eaea;
+    border-radius: 16px;
+}
+.item .form-add{
+    flex-grow: 1;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+.item .form-add .form{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+.item .form-add .form .top {
+    height: 100%;
+    background: #f2f2f2;
+}
+.item .form-add .form .top .center{
+    height: 100%;
+    padding-top: 35px;
+}
+.scroll {
+    position: absolute;
+    width: 100%;
+    height: 89%;
+    overflow: hidden;
+    background: #f2f2f2;
+}
+.scroll-view {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    padding-right: 12px;
+    padding-left: 10px;
+    overflow: scroll;
+    height: 100%;
+    width: 98%;
+}
+
+.item .form-add .form .bottom-actions {
+    width: 100%;
+    height: 44px;
+    border-top: solid 1px #ddd;
+    box-shadow: 0 0px 5px #ddd;
+    background: #f2f2f2;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+.item .form-add .form .bottom-actions {
+    width: 100%;
+    height: 44px;
+    border-top: solid 1px #ddd;
+    box-shadow: 0 0px 0px #ddd;
+    background: #f2f2f2;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    margin-bottom: 0;
+    font-size: 13px;
+    font-weight: 400;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid;
+    border-radius: 4px;
+    background-color: #f6f7f9;
+    border-color: #ced0d4;
+    color: #4b4f56;
+}
+.item .form-add .form .bottom-actions .btn {
+    height: 30px;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 30px;
+    padding: 0 12px;
+    margin-right: 15px;
+    text-transform: uppercase;
+}
+.item .form-add .form .bottom-actions .btn .fi {
+    margin-right: 8px;
+    margin-top: 10px;
+}
+.item .form-add .form .title {  
+    font-size: 19px;
+    font-weight: bold;
+    color: #756a6a;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.item .form-add .form a.titleQSPR {
+    font-size: 19px;
+    cursor: pointer;
+    color: #5353ff;
+    margin-top: 10px;
+}
+.item .form-add .form a.titleQSPR:hover {
+    color: #a4a4ea;
+}
+.item .form-add .form .QSPR{
+    font-size: 17px;
+}
+.item .form-add .form .questionName{
+    resize: none;
+    height: 70px;
+    line-height: 25px;
+    width: 94.4%;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    padding: 10px 40px;
+    font-family: sans-serif;
+}
+.vceditor-scroll-wrapper {
+    padding: 10px 40px !important;
+}
+.vceditor-content-wrapper {
+    position: relative;
+    margin: 0 auto;
+    padding: 0px 0 0 0 !important;
+    background: #fff;
+    height: auto;
+    min-height: 100%;
+}
+.vceditor-content.ims-medium-editor-element{
+    outline: none !important;
+}
+.error {
+    font-size: 17px;
+    color: red;
+    width: 100%;
+    border-radius: 3px;
+    text-align: center;
+    margin-top: 8px;
+}
+/* Dialog QSPR */
+.dialogQSPR {
+    position: fixed;
+    left: 0;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 999999999999;
+}
+.dialogQSPR .dialogOption {
+    background: #f4f4f4;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    position: absolute;
+    top: 45px;
+    right: 84%;
+    width: 68%;
+    height: 80%;
+    transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    transition: transform ease-out 300ms;
+    -webkit-transition: -webkit-transform ease-out 300ms;
+}
+.dialogQSPR .dialogOption .header {
+    display: flex;
+    justify-content: space-between;
+    background: #f2f2f2;
+    padding: 10px 10px;
+    border-bottom: 1px solid #9a1f1f;
+    font-size: 15px;
+    font-weight: bold;
+    color: #7c7171;
+}
+.dialogQSPR .dialogOption .header .closeForm {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: white;
+    text-align: center;
+    color: #ccc;
+    font-size: 17px;
+    box-shadow: 0px 0px 4px 3px #f6e3e3;
+    cursor: pointer;
+}
+.dialogQSPR .dialogOption .content {
+    height: calc(100% - 44px);
+    background: white;
+    display: flex;
+    flex-direction: column;
+}
+.dialogQSPR .dialogOption .content .main{
+    width: 98%;
+    height: 86%;
+    margin: 0 auto;
+}
+.dialogQSPR .dialogOption .content .topbar {
+    display: flex;
+    height: 65px;
+    border-bottom: 1px solid #dbdbdb;
+    background: #fff;
+    align-items: center;
+    flex-shrink: 0;
+}
+.dialogQSPR .dialogOption .content .topbar .filters {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    width: 70%;
+    padding: 0;
+    flex-shrink: 0;
+}
+.dialogQSPR .dialogOption .content .topbar .filters .box-filter {
+    margin: 0 10px 0 0px;
+    display: flex;
+    width: 100%;
+}
+.dialogQSPR .dialogOption .content .topbar .filters input.keyword-filter-input {
+    border: 1px solid #e2e2e2;
+    width: 100%;
+    height: 28px;
+    box-sizing: border-box;
+    border-radius: 3px;
+    background-color: #fff;
+    padding: 0 5px 0 5px;
+    font-size: 14px;
+}
+.dialogQSPR .dialogOption .content .topbar .filters .button {
+    cursor: pointer;
+    border-radius: 4px;
+    line-height: 28px;
+    min-height: 30px;
+    padding: 0 20px;
+    color: #8493a8;
+    border: solid 1px #dedede;
+    background: linear-gradient(to bottom, #fff 0%, #f6f6f6 100%);
+    font-weight: bold;
+    font-size: 12px;
+    outline: none;
+}
+.dialogQSPR .dialogOption .content .topbar .pagination {
+    flex: 1 1 0%;
+    font-size: 15px;
+}
+.dialogQSPR .dialogOption .content .main .listQSPR-container{
+    display: flex;
+    flex-grow: 1;
+    overflow: hidden;
+    width: 100%;
+    height: 90%;
+}
+.dialogQSPR .dialogOption .content .main .listQSPR-container .scroll-list{
+    position: relative;
+    width: 100%;
+    height: 98%;
+}
+.dialogQSPR .dialogOption .content .main .listQSPR-container .scroll-list .scroll-list-view {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: -11px;
+    overflow: scroll;
+    margin-right: -8px;
+    margin-bottom: -8px;
+    width: 100%;
+}
+.dialogQSPR .dialogOption .content .main .listQSPR-container .list-group {
+    display: block;
+    margin-bottom: 10px;
+}
+.dialogQSPR .dialogOption .content .main .listQSPR-container .list-group .list-item{
+    display: flex;
+    flex-direction: column;
+}
+.dialogQSPR .dialogOption .content .main .listQSPR-container .list-group .list-item .list-item-main{
+    position: relative;
+    display: flex;
+    border-bottom: solid 1px #fbdede;
+    border-radius: 3px;
+    padding: 10px 10px 10px 10px;
+    color: #5e5ee0;
+    font-weight: bold;
+    font-size: 17px;
+}
+.dialogQSPR .dialogOption .content .main .listQSPR-container .list-group .list-item .list-item-main:hover{
+    background: #ffefef;
+    cursor: pointer;
+}
+.dialogQSPR .dialogOption .footer .bottom-actions{
+    margin-bottom: 0px;
+}
+.active{
+    background: #ffefef;
+}

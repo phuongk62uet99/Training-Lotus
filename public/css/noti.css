@@ -1,0 +1,27 @@
+.dialog-noti{
+    font-size: 17px;
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 260px;
+    height: 35px;
+    margin-left: -90px;
+    z-index: 9999999;
+    transform: translate(0px, -400px);
+    transition: transform 300ms ease-in-out;
+}
+.noti-update{
+    background: #83eace;
+    color: #3a4245;
+}
+.noti-delete{
+    background: #ff5959;
+    color: white;
+}
+.noti-show{
+    transform: translate(0px, 0px);
+}

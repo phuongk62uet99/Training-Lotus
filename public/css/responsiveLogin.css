@@ -1,0 +1,20 @@
+@media screen and (max-width: 1230px) {
+    .login.theme{
+        display: flex;
+    }
+    .login form {
+        width: 50%;
+    }
+    .slogan {
+        display: flex;
+        height: 100%;
+        flex-grow: 1;
+        background: transparent url(../images/login-ims-text.png) center center no-repeat;
+        display: block;
+    }
+}
+@media screen and (max-width: 800px) {
+    .login form {
+        width: 100%;
+    }
+}
